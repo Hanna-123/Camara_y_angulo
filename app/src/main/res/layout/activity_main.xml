@@ -34,14 +34,9 @@
         android:id="@+id/xrb0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tomar una vista previa">
+        android:text="Tomar una imagen">
         </RadioButton>
-        <RadioButton
-        android:id="@+id/xrb1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tomar una imagen completa">
-        </RadioButton>
+
         <RadioButton
         android:id="@+id/xrb2"
         android:layout_width="wrap_content"

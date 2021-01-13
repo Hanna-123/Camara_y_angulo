@@ -76,35 +76,13 @@ public class MainActivity extends Activity implements View.OnTouchListener{
             public void onClick(View v) {
 
                 jbr0 = (RadioButton)findViewById(R.id.xrb0);
-                jrb1= (RadioButton)findViewById(R.id.xrb1);
                 jrb2=(RadioButton)findViewById(R.id.xrb2);
 
                 int code = TAKE_A_PICTURE;
                 if(jbr0.isChecked()){
                     myIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                     startActivityForResult(myIntent,TAKE_A_PICTURE);
-                }
-                if(jrb1.isChecked()){
-                    Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    File FileDirectory = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-                    FileDirectory.mkdirs();
-
-                    try{
-                        TempImage =  File.createTempFile("hola",".jpg",FileDirectory);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    Uri output = FileProvider.getUriForFile(MainActivity.this,"com.example.android.fileprovider",TempImage);
-                    i.putExtra(MediaStore.EXTRA_OUTPUT, output);
-                    try {
-                        s = TempImage.getCanonicalPath();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    code= TAKE_A_PICTURE;
-                    startActivityForResult(i, code);
-                }else if(jrb2.isChecked()){
+                } else if(jrb2.isChecked()){
                     myIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
                     code = SELECT_PICTURE;
                     startActivityForResult(myIntent, code);
