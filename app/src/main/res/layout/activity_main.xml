@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/widget28"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button
+    android:text="Toma foto"
+    android:id="@+id/xbn1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true">
+
+    </Button>
+
+    <Button
+        android:id="@+id/xbtn"
+        android:layout_width="171dp"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:onClick="borrarTodo"
+        android:text="Nuevo intento" />
+
+    <RadioGroup
+        android:id="@+id/xrg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+        <RadioButton
+        android:id="@+id/xrb0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomar una vista previa">
+        </RadioButton>
+        <RadioButton
+        android:id="@+id/xrb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomar una imagen completa">
+        </RadioButton>
+        <RadioButton
+        android:id="@+id/xrb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar una foto de la galería">
+        </RadioButton>
+    </RadioGroup>
+
+
+
+    <AbsoluteLayout
+        android:id="@+id/xll"
+        android:layout_width="match_parent"
+        android:layout_height="545dp"
+        android:layout_below="@id/xrg1">
+
+        <ImageView
+            android:id="@+id/xiv1"
+            android:layout_width="match_parent"
+            android:layout_height="483dp"
+            android:layout_marginTop="86dp"
+            android:layout_x="0dp"
+            android:layout_y="142dp"
+
+            />
+    </AbsoluteLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/xtv"
+        android:layout_below="@id/xrg1" />
+
+
+</RelativeLayout>
